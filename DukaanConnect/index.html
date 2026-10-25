@@ -1,0 +1,863 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   DukaanConnect &mdash; Local shops, online
+  </title>
+  <!-- Load the site styles from the separate CSS file. -->
+  <link rel="stylesheet" href="styles.css">
+ </head>
+ <body>
+  <div class="wrap">
+   <!-- Main navigation: buttons switch between the four four demo views. -->
+  <nav class="nav">
+    <div class="brand">
+     <div class="logo">
+      D
+     </div>
+     <span>
+      DukaanConnect
+     </span>
+    </div>
+    <div class="navlinks">
+     <button class="active" data-view="home">
+      Home
+     </button>
+     <button data-view="store">
+      Customer demo
+     </button>
+     <button data-view="dashboard">
+      Shop dashboard
+     </button>
+     <button data-view="admin">
+      Platform admin
+     </button>
+    </div>
+   </nav>
+   <!-- Landing page: introduces the product and links to the interactive demos. -->
+  <main id="homeView">
+    <section class="hero">
+     <div>
+      <div class="eyebrow">
+       <span class="dot">
+       </span>
+       Made for local business
+      </div>
+      <h1>
+       Your shop.
+       <br/>
+       <em>
+        Online.
+       </em>
+       In minutes.
+      </h1>
+      <p class="lead">
+       Give every neighbourhood shop a simple website, a scannable QR code, and an easy way to take orders &mdash; without the tech headache.
+      </p>
+      <div class="actions">
+       <button class="primary" onclick="showView('dashboard')">
+        Explore shop dashboard &nearrow;
+       </button>
+       <button class="secondary" onclick="showView('store')">
+        See customer experience
+       </button>
+      </div>
+      <div class="micro">
+       A demo prototype &bull; Sample shop and products included
+      </div>
+     </div>
+     <div class="hero-card">
+      <div class="phone">
+       <div class="phone-top">
+        <span>
+         9:41
+        </span>
+        <span>
+         ●●● ▰
+        </span>
+       </div>
+       <div class="food-hero">
+        🥪 🥤
+       </div>
+       <div class="shop-title">
+        The Corner Caf&eacute;
+       </div>
+       <div class="small">
+        Fresh bites &bull; Kolkata &middot; Open today
+       </div>
+       <div class="mini-items">
+        <div class="mini-item">
+         🥪
+         <b>
+          Grilled Sandwich
+         </b>
+         <span>
+          ₹99
+         </span>
+        </div>
+        <div class="mini-item">
+         ☕
+         <b>
+          Cold Coffee
+         </b>
+         <span>
+          ₹79
+         </span>
+        </div>
+        <div class="mini-item">
+         🍟
+         <b>
+          Peri Peri Fries
+         </b>
+         <span>
+          ₹89
+         </span>
+        </div>
+        <div class="mini-item">
+         🍰
+         <b>
+          Chocolate Cake
+         </b>
+         <span>
+          ₹119
+         </span>
+        </div>
+       </div>
+       <div style="margin-top:14px;background:#176b4d;color:white;text-align:center;border-radius:10px;padding:10px;font-size:12px;font-weight:800">
+        View menu &middot; Add to cart
+       </div>
+      </div>
+     </div>
+    </section>
+    <section class="section">
+     <div class="section-head">
+      <div>
+       <div class="eyebrow">
+        One platform, three experiences
+       </div>
+       <h2>
+        Small shop. Big possibilities.
+       </h2>
+      </div>
+      <p class="muted" style="max-width:380px;line-height:1.6">
+       Start with digital menus and product catalogues. Add ordering and business tools as the platform grows.
+      </p>
+     </div>
+     <div class="feature-grid">
+      <div class="feature">
+       <div class="emoji">
+        📱
+       </div>
+       <h3>
+        QR to storefront
+       </h3>
+       <p>
+        Print a QR code for the counter, table, packaging, or shop window. Customers open the shop's page directly.
+       </p>
+      </div>
+      <div class="feature">
+       <div class="emoji">
+        ⚡
+       </div>
+       <h3>
+        Live product updates
+       </h3>
+       <p>
+        Shopkeepers can update stock, prices, descriptions, and product photos from their dashboard.
+       </p>
+      </div>
+      <div class="feature">
+       <div class="emoji">
+        🛍️
+       </div>
+       <h3>
+        Simple ordering
+       </h3>
+       <p>
+        Customers can add items to a cart and send an order request. Payment and delivery integrations can come next.
+       </p>
+      </div>
+     </div>
+    </section>
+    <section class="section">
+     <div class="section-head">
+      <div>
+       <div class="eyebrow">
+        Try the prototype
+       </div>
+       <h2>
+        See how it works
+       </h2>
+      </div>
+     </div>
+     <div class="feature-grid">
+      <div class="feature">
+       <div class="emoji">
+        🍽️
+       </div>
+       <h3>
+        Customer storefront
+       </h3>
+       <p>
+        Browse a sample menu, filter categories, add products to the cart, and preview an order.
+       </p>
+       <button class="secondary" onclick="showView('store')" style="margin-top:16px">
+        Open storefront &rarr;
+       </button>
+      </div>
+      <div class="feature">
+       <div class="emoji">
+        🧑&zwj;🍳
+       </div>
+       <h3>
+        Shopkeeper dashboard
+       </h3>
+       <p>
+        Add products, edit prices, mark items unavailable, and see sample incoming orders.
+       </p>
+       <button class="secondary" onclick="showView('dashboard')" style="margin-top:16px">
+        Manage products &rarr;
+       </button>
+      </div>
+      <div class="feature">
+       <div class="emoji">
+        🧩
+       </div>
+       <h3>
+        Admin workspace
+       </h3>
+       <p>
+        Review demo shops, onboarding requests, and your service plans in one place.
+       </p>
+       <button class="secondary" onclick="showView('admin')" style="margin-top:16px">
+        Open admin &rarr;
+       </button>
+      </div>
+     </div>
+    </section>
+   </main>
+   <!-- Customer storefront: product categories, product cards, and cart entry point. -->
+  <main class="hidden" id="storeView">
+    <section class="section">
+     <div class="store-head">
+      <div class="eyebrow">
+       QR storefront preview
+      </div>
+      <h2 id="storeName">
+       The Corner Caf&eacute;
+      </h2>
+      <p class="muted" id="storeDescription">
+       Fresh bites, good coffee, and a little neighbourhood comfort.
+      </p>
+      <div class="micro">
+       📍 Kolkata &middot; Pickup available &middot;
+       <span class="status">
+        ● Accepting orders
+       </span>
+      </div>
+     </div>
+     <div class="section-head">
+      <div>
+       <h2 style="font-size:28px">
+        Menu
+       </h2>
+       <p class="muted">
+        Choose your favourites. Prices shown in INR.
+       </p>
+      </div>
+      <button class="ghost" onclick="showView('dashboard')">
+       Edit this shop &nearrow;
+      </button>
+     </div>
+     <div class="categories" id="categoryButtons">
+     </div>
+     <div class="store-products" id="storeProducts">
+     </div>
+     <div class="cartbar">
+      <div>
+       <b id="cartCount">
+        0 items
+       </b>
+       <div class="micro" id="cartTotal" style="color:#cbd5cd">
+        ₹0 total
+       </div>
+      </div>
+      <button onclick="openCart()">
+       Review order &rarr;
+      </button>
+     </div>
+     <div class="notice">
+      Prototype note: this demo previews the ordering flow in your browser. It does not send orders to a real shop or process payments.
+     </div>
+    </section>
+   </main>
+   <!-- Shopkeeper dashboard: manage products, orders, QR preview, and shop profile. -->
+  <main class="hidden" id="dashboardView">
+    <section class="section">
+     <div class="section-head">
+      <div>
+       <div class="eyebrow">
+        Shopkeeper workspace
+       </div>
+       <h2>
+        Manage your shop
+       </h2>
+       <p class="muted">
+        Update the menu without calling a developer.
+       </p>
+      </div>
+      <span class="status">
+       ● Demo mode
+      </span>
+     </div>
+     <div class="tabs">
+      <button class="active" data-tab="productsTab">
+       Products
+      </button>
+      <button data-tab="ordersTab">
+       Orders
+      </button>
+      <button data-tab="qrTab">
+       QR code
+      </button>
+      <button data-tab="profileTab">
+       Shop profile
+      </button>
+     </div>
+     <div class="tab-content" id="productsTab">
+      <div class="dashboard-grid">
+       <div class="panel">
+        <h3 id="productFormTitle">
+         ＋ Add a product
+        </h3>
+        <form id="productForm">
+         <input id="editId" type="hidden"/>
+         <div class="field">
+          <label for="pName">
+           Product name *
+          </label>
+          <input id="pName" placeholder="e.g. Masala chai" required=""/>
+         </div>
+         <div class="row-fields">
+          <div class="field">
+           <label for="pPrice">
+            Price (₹) *
+           </label>
+           <input id="pPrice" min="0" placeholder="40" required="" step="1" type="number"/>
+          </div>
+          <div class="field">
+           <label for="pCategory">
+            Category
+           </label>
+           <select id="pCategory">
+            <option>
+             Food
+            </option>
+            <option>
+             Drinks
+            </option>
+            <option>
+             Desserts
+            </option>
+            <option>
+             Groceries
+            </option>
+            <option>
+             Other
+            </option>
+           </select>
+          </div>
+         </div>
+         <div class="field">
+          <label for="pEmoji">
+           Product icon
+          </label>
+          <select id="pEmoji">
+           <option>
+            🥪
+           </option>
+           <option>
+            ☕
+           </option>
+           <option>
+            🍟
+           </option>
+           <option>
+            🍰
+           </option>
+           <option>
+            🥤
+           </option>
+           <option>
+            🍕
+           </option>
+           <option>
+            🍛
+           </option>
+           <option>
+            🛍️
+           </option>
+           <option>
+            🥗
+           </option>
+           <option>
+            🍪
+           </option>
+           <option>
+            🧃
+           </option>
+           <option>
+            🍞
+           </option>
+          </select>
+         </div>
+         <div class="field">
+          <label for="pDesc">
+           Short description
+          </label>
+          <textarea id="pDesc" placeholder="What makes it special?"></textarea>
+         </div>
+         <button class="primary" id="saveProductBtn" type="submit">
+          Add product
+         </button>
+         <button class="ghost" onclick="resetProductForm()" type="button">
+          Clear
+         </button>
+        </form>
+       </div>
+       <div class="panel">
+        <h3>
+         Your catalogue
+         <span class="muted" id="productCount">
+         </span>
+        </h3>
+        <div class="product-list" id="manageProducts">
+        </div>
+       </div>
+      </div>
+     </div>
+     <div class="tab-content hidden" id="ordersTab">
+      <div class="panel">
+       <h3>
+        Recent orders
+       </h3>
+       <div class="product-list">
+        <div class="product-row">
+         <div>
+          <div class="product-name">
+           #DC-1042 &middot; Sample order
+          </div>
+          <div class="product-meta">
+           2 items &middot; Pickup &middot; 12:35 PM
+          </div>
+         </div>
+         <span class="stock">
+          Accepted
+         </span>
+        </div>
+        <div class="product-row">
+         <div>
+          <div class="product-name">
+           #DC-1041 &middot; Sample order
+          </div>
+          <div class="product-meta">
+           1 item &middot; Pickup &middot; 12:18 PM
+          </div>
+         </div>
+         <span class="stock off">
+          Preparing
+         </span>
+        </div>
+        <div class="product-row">
+         <div>
+          <div class="product-name">
+           #DC-1040 &middot; Sample order
+          </div>
+          <div class="product-meta">
+           3 items &middot; Pickup &middot; Yesterday
+          </div>
+         </div>
+         <span class="stock">
+          Completed
+         </span>
+        </div>
+       </div>
+       <div class="notice">
+        These are sample orders only. Real-time order notifications require a backend and database.
+       </div>
+      </div>
+     </div>
+     <div class="tab-content hidden" id="qrTab">
+      <div class="dashboard-grid">
+       <div class="panel">
+        <h3>
+         Your shop QR code
+        </h3>
+        <p class="muted">
+         Customers scan this to open your digital storefront.
+        </p>
+        <div class="qrbox">
+         <div class="qrplaceholder" id="qrVisual">
+         </div>
+         <b id="qrShopLabel">
+          The Corner Caf&eacute;
+         </b>
+         <p class="micro">
+          Sample QR preview
+         </p>
+        </div>
+        <div class="actions">
+         <button class="primary" onclick="downloadQR()">
+          Download QR SVG
+         </button>
+         <button class="secondary" onclick="copyStoreLink()">
+          Copy shop link
+         </button>
+        </div>
+       </div>
+       <div class="panel">
+        <h3>
+         How to use it
+        </h3>
+        <p>
+         1. Download and print the QR code.
+        </p>
+        <p>
+         2. Place it on the counter, tables, bags, or shop window.
+        </p>
+        <p>
+         3. Customers scan it with their phone camera.
+        </p>
+        <div class="notice">
+         The demo uses a local preview link. For a live public QR code, deploy the website and assign each shop a permanent URL first.
+        </div>
+       </div>
+      </div>
+     </div>
+     <div class="tab-content hidden" id="profileTab">
+      <div class="panel" style="max-width:650px">
+       <h3>
+        Shop profile
+       </h3>
+       <form id="profileForm">
+        <div class="field">
+         <label for="shopNameInput">
+          Shop name
+         </label>
+         <input id="shopNameInput" required="" value="The Corner Caf&eacute;"/>
+        </div>
+        <div class="field">
+         <label for="shopDescInput">
+          Description
+         </label>
+         <textarea id="shopDescInput">Fresh bites, good coffee, and a little neighbourhood comfort.</textarea>
+        </div>
+        <div class="row-fields">
+         <div class="field">
+          <label for="shopLocationInput">
+           Location
+          </label>
+          <input id="shopLocationInput" value="Kolkata"/>
+         </div>
+         <div class="field">
+          <label for="shopTypeInput">
+           Business type
+          </label>
+          <select id="shopTypeInput">
+           <option>
+            Caf&eacute; / Restaurant
+           </option>
+           <option>
+            Grocery shop
+           </option>
+           <option>
+            Bakery
+           </option>
+           <option>
+            Fashion / Retail
+           </option>
+           <option>
+            Other
+           </option>
+          </select>
+         </div>
+        </div>
+        <button class="primary" type="submit">
+         Save shop profile
+        </button>
+       </form>
+      </div>
+     </div>
+    </section>
+   </main>
+   <!-- Platform admin area: review sample shop onboarding and see example plans. -->
+  <main class="hidden" id="adminView">
+    <section class="section">
+     <div class="section-head">
+      <div>
+       <div class="eyebrow">
+        Platform owner
+       </div>
+       <h2>
+        Admin workspace
+       </h2>
+       <p class="muted">
+        A starting point for managing shop onboarding.
+       </p>
+      </div>
+      <span class="status">
+       ● Demo data
+      </span>
+     </div>
+     <div class="feature-grid" style="margin-bottom:18px">
+      <div class="feature">
+       <div class="micro">
+        TOTAL SHOPS
+       </div>
+       <h2 style="font-size:34px;margin:10px 0">
+        12
+       </h2>
+       <p>
+        Sample registered businesses
+       </p>
+      </div>
+      <div class="feature">
+       <div class="micro">
+        ONBOARDING REQUESTS
+       </div>
+       <h2 style="font-size:34px;margin:10px 0">
+        4
+       </h2>
+       <p>
+        Waiting for review
+       </p>
+      </div>
+      <div class="feature">
+       <div class="micro">
+        MONTHLY REVENUE
+       </div>
+       <h2 style="font-size:34px;margin:10px 0">
+        ₹0
+       </h2>
+       <p>
+        Demo only &mdash; no payments connected
+       </p>
+      </div>
+     </div>
+     <div class="dashboard-grid">
+      <div class="panel">
+       <h3>
+        New shop onboarding
+       </h3>
+       <form id="onboardForm">
+        <div class="field">
+         <label for="ownerName">
+          Owner name *
+         </label>
+         <input id="ownerName" placeholder="Shop owner's name" required=""/>
+        </div>
+        <div class="field">
+         <label for="newShopName">
+          Business name *
+         </label>
+         <input id="newShopName" placeholder="e.g. Maa Tara Stores" required=""/>
+        </div>
+        <div class="row-fields">
+         <div class="field">
+          <label for="ownerPhone">
+           Phone *
+          </label>
+          <input id="ownerPhone" inputmode="tel" placeholder="10-digit mobile" required=""/>
+         </div>
+         <div class="field">
+          <label for="newShopType">
+           Business type
+          </label>
+          <select id="newShopType">
+           <option>
+            Restaurant
+           </option>
+           <option>
+            Grocery
+           </option>
+           <option>
+            Bakery
+           </option>
+           <option>
+            Retail
+           </option>
+           <option>
+            Other
+           </option>
+          </select>
+         </div>
+        </div>
+        <div class="field">
+         <label for="ownerArea">
+          Area / locality
+         </label>
+         <input id="ownerArea" placeholder="e.g. Behala, Kolkata"/>
+        </div>
+        <button class="primary" type="submit">
+         Add onboarding request
+        </button>
+       </form>
+      </div>
+      <div class="panel">
+       <h3>
+        Recent onboarding requests
+       </h3>
+       <div class="product-list" id="onboardList">
+        <div class="product-row">
+         <div>
+          <div class="product-name">
+           Maa Tara Stores
+          </div>
+          <div class="product-meta">
+           Grocery &middot; Behala
+          </div>
+         </div>
+         <span class="stock off">
+          Review
+         </span>
+        </div>
+        <div class="product-row">
+         <div>
+          <div class="product-name">
+           Sweet Corner
+          </div>
+          <div class="product-meta">
+           Bakery &middot; Jadavpur
+          </div>
+         </div>
+         <span class="stock">
+          Contacted
+         </span>
+        </div>
+       </div>
+       <div class="notice">
+        This prototype does not store submissions on a server. Connect authentication and a database before using it with real shopkeepers.
+       </div>
+      </div>
+     </div>
+     <div class="section">
+      <div class="section-head">
+       <div>
+        <h2 style="font-size:28px">
+         Possible pricing model
+        </h2>
+        <p class="muted">
+         Start simple; validate willingness to pay with local shopkeepers.
+        </p>
+       </div>
+      </div>
+      <div class="feature-grid">
+       <div class="feature">
+        <h3>
+         Starter
+        </h3>
+        <h2>
+         ₹0
+        </h2>
+        <p>
+         Basic digital catalogue and QR menu to onboard early shops.
+        </p>
+       </div>
+       <div class="feature">
+        <h3>
+         Local Plus
+        </h3>
+        <h2>
+         ₹199
+         <span class="muted" style="font-size:13px">
+          / month
+         </span>
+        </h2>
+        <p>
+         Product management, order requests, and shop profile tools.
+        </p>
+       </div>
+       <div class="feature">
+        <h3>
+         Business
+        </h3>
+        <h2>
+         ₹499
+         <span class="muted" style="font-size:13px">
+          / month
+         </span>
+        </h2>
+        <p>
+         More catalogue features, reports, and priority support.
+        </p>
+       </div>
+      </div>
+      <p class="micro">
+       Illustrative pricing only &mdash; not a live offer or market-validated price.
+      </p>
+     </div>
+    </section>
+   </main>
+   <footer class="footer">
+    DukaanConnect &middot; A concept prototype for helping local shops get online.
+    <span style="float:right">
+     Built for neighbourhood businesses
+    </span>
+    <span style="float:right;margin-right:12px">
+     Contact: <a href="mailto:pandeyabhishekh24@gmail.com">pandeyabhishekh24@gmail.com</a>
+    </span>
+   </footer>
+  </div>
+  <!-- Checkout modal: collects demo customer details but does not submit a real order. -->
+  <div class="hidden" id="cartModal" style="position:fixed;inset:0;background:#10201888;z-index:20;display:flex;align-items:center;justify-content:center;padding:18px">
+   <div class="demo" style="width:min(520px,100%);max-height:90vh;overflow:auto">
+    <div style="display:flex;justify-content:space-between;align-items:center">
+     <h2 style="margin:0">
+      Your order
+     </h2>
+     <button class="ghost" onclick="closeCart()">
+      ✕
+     </button>
+    </div>
+    <div id="cartItems" style="margin:16px 0">
+    </div>
+    <div class="field">
+     <label for="customerName">
+      Your name
+     </label>
+     <input id="customerName" placeholder="Name"/>
+    </div>
+    <div class="field">
+     <label for="customerPhone">
+      Phone number
+     </label>
+     <input id="customerPhone" inputmode="tel" placeholder="Mobile number"/>
+    </div>
+    <div class="field">
+     <label for="orderNote">
+      Order note (optional)
+     </label>
+     <textarea id="orderNote" placeholder="Pickup time or special request"></textarea>
+    </div>
+    <div style="display:flex;justify-content:space-between;align-items:center;margin:12px 0">
+     <b id="modalTotal">
+      Total: ₹0
+     </b>
+     <button class="primary" onclick="placeDemoOrder()">
+      Place demo order
+     </button>
+    </div>
+    <p class="micro">
+     Demo only: no order is sent to a business.
+    </p>
+   </div>
+  </div>
+  <div class="toast hidden" id="toast">
+  </div>
+  <!-- Load interactive behaviour from the separate JavaScript file. -->
+  <script src="script.js" defer></script>
+ </body>
+</html>
+
